@@ -1,0 +1,367 @@
+/*************************************************************/
+/************************* Variables *************************/
+/*************************************************************/
+
+:root {
+    /* Colors */
+    -main-background-one:    #28288d;
+    -main-background-two:    #3d0b3d;
+    --main-black:            #100F0F;
+    --main-green:            #0F3D3E;
+    --main-darkGreen:        #031f20;
+    --main-gray:             #e7dcb8;
+    --main-white:            #F1F1F1;
+    --main-transparentWhite: rgba(241, 241, 241, 0.3);
+    --main-transparentBlack: rgba(16, 15, 15, 0.6);
+
+    --second-gray:   #d2d2ca;
+    --second-blue:   rgb(192, 192, 236);
+    --second-green:  rgb(5, 164, 5);
+    --second-orange: rgb(251, 229, 188);
+
+    --tab-blue-sel:  #1C3879;
+    --tab-blue:      #607EAA;
+    --tab-hover:     #335094;
+    --tab-container: #EAE3D2;
+    --tab-white:     #F9F5EB;
+
+
+    --star-darkGray:  rgb(152, 149, 149);
+    --star-lightGray: rgb(223, 211, 211);
+    --star-white: #ffffff;
+
+    /* Fonts */
+    --main-font: 'Krub', sans-serif;
+
+}
+
+/************************************************************/
+/************************* Settings *************************/
+/************************************************************/
+
+html {
+    box-sizing: border-box;
+    font-size:  62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin:     0;
+    padding:    0;
+}
+
+body {
+    background-color: lightgray;
+    font-family:      var(--main-font);
+    font-size:        1.6rem;
+    line-height:      2;
+}
+
+
+/*************************************************************/
+/************************* Utilities *************************/
+/*************************************************************/
+
+.clear-link {
+    text-decoration: none;
+}
+
+.clear-list {
+    list-style: none;
+}
+
+
+/*****************************************************************/
+/************************* Main Parallax *************************/
+/*****************************************************************/
+
+main#stars {
+    overflow: hidden;
+}
+
+
+/**************************************************************/
+/************************* Top NavBar *************************/
+/**************************************************************/
+
+nav.upper-navbar {
+    align-items:      center;
+    backdrop-filter:  blur(0.8rem);
+    background-color: rgba(255, 255, 255, 0.2);
+    display:          flex;
+    justify-content:  space-between;
+    padding:          0 4rem;
+    position:         fixed;
+    top:              0;
+    width:            100%;
+    z-index:          1000;
+}
+
+.odes-navbar {
+    color:          var(--main-white);
+    display:        flex;
+    flex-direction: row;
+    font-size:      2.6rem;
+    font-weight:    700;
+}
+
+.odes-navbar:hover {
+    color:       var(--main-white);
+    font-size:   2.6rem;
+    font-weight: 700;
+}
+
+.odes-navbar__word {
+    align-items:     center;
+    display:         flex;
+    justify-content: space-evenly;
+    margin-right:    0;
+    transition:      all ease-in-out 1.2s;
+}
+
+.odes-navbar__subword {
+    max-width: 0;
+    opacity:   0;
+    overflow:  hidden;
+    transition: all ease-in-out 1.2s;
+}
+
+.odes-navbar:hover .odes-navbar__word {
+    margin-right: 1rem;
+}
+
+.odes-navbar:hover .odes-navbar__subword {
+    max-width: 10rem;
+    opacity:   1;
+}
+
+/* Menu */
+
+.upper-navbar ul {
+    align-items:     center;
+    display:         flex;
+    justify-content: center;
+}
+
+.upper-navbar ul li {
+    border-bottom: 0.4rem solid transparent;
+    height:        100%;
+    padding:       0.6rem 0;
+}
+
+.upper-navbar ul li:hover {
+    border-bottom: 0.4rem solid var(--main-gray);
+}
+
+.upper-navbar ul li.active:hover {
+    border-bottom: 0.4rem solid var(--main-gray);
+}
+
+.upper-navbar ul li a {
+    color:       var(--main-white);
+    font-weight: 200;
+    height:      100%;
+    padding:     0.6rem 2rem;
+}
+
+.upper-navbar ul li.active {
+    border-bottom: 0.4rem solid var(--main-white);
+}
+
+.upper-navbar ul li a {
+    color:       var(--main-white);
+    font-size:   2.8rem;
+    font-weight: 500;
+    height:      100%;
+    padding:     0.6rem 2rem;
+}
+
+.upper-navbar ul li.active a {
+    font-weight: 700;
+}
+
+.upper-navbar ul li a:hover {
+    color: var(--main-gray);
+}
+
+/*********************************************************/
+/************************* Stars *************************/
+/*********************************************************/
+
+.stars {
+    background:            rgb(61,11,61);
+    background:            -moz-linear-gradient(0deg, rgba(61,11,61,1) 14%, rgba(9,9,121,1) 87%, rgba(40,40,141,1) 100%);
+    background:            -webkit-linear-gradient(0deg, rgba(61,11,61,1) 14%, rgba(9,9,121,1) 87%, rgba(40,40,141,1) 100%);
+    background:            linear-gradient(0deg, rgba(61,11,61,1) 14%, rgba(9,9,121,1) 87%, rgba(40,40,141,1) 100%);
+    background-attachment: fixed;
+    filter:                progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0b3d",endColorstr="#28288d",GradientType=1); 
+    height:   200vh;
+    position: relative;
+    width:    100%;
+}
+
+.stars__container {
+    height:   100%;
+    position: absolute;
+    top:      0;
+    width:    100%;
+    z-index:  100;
+}
+
+.stars__layout {
+    height:   100%;
+    position: relative;
+    width:    100%;
+    z-index:  inherit;
+}
+
+.star {
+    position: absolute;
+}
+
+.star-1 {
+    height: 0.6rem;
+    width:  0.6rem;
+}
+
+.star-2 {
+    height: 0.5rem;
+    width:  0.5rem;
+}
+
+.star-3 {
+    height: 0.4rem;
+    width:  0.4rem;
+}
+
+.star-4 {
+    height: 0.3rem;
+    width:  0.3rem;
+}
+
+.star-5 {
+    height: 0.2rem;
+    width:  0.2rem;
+}
+
+.star-6 {
+    height: 0.1rem;
+    width:  0.1rem;
+}
+
+.star svg {
+    color:     var(--star-darkGray);
+}
+
+@keyframes star-animation-1 {
+    0% {
+        color:     var(--star-darkGray);
+        transform: scale(1.2);
+    }
+    
+    25% {
+        color:     var(--star-lightGray);
+        transform: scale(1.4);
+    }
+    
+    50% {
+        color:     var(--star-white);
+        transform: scale(1.6);
+    }
+
+    
+    75% {
+        color:     var(--star-lightGray);
+        transform: scale(1.4);
+    }
+    
+    100% {
+        color:     var(--star-darkGray);
+        transform: scale(1);
+    }
+}
+
+@keyframes star-animation-2 {
+    0% {
+        color:     var(--star-lightGray);
+        transform: scale(1.2);
+    }
+    
+    50% {
+        color:     var(--star-white);
+        transform: scale(1.6);
+    }
+    
+    100% {
+        color:     var(--star-darkGray);
+        transform: scale(1);
+    }
+}
+
+@keyframes star-animation-3 {
+        0% {
+            color:     var(--star-white);
+            transform: scale(1.2);
+        }
+        
+        25% {
+            color:     var(--star-lightGray);
+            transform: scale(1.4);
+        }
+        
+        50% {
+            color:     var(--star-darkGray);
+            transform: scale(1.6);
+        }
+    
+        
+        75% {
+            color:     var(--star-lightGray);
+            transform: scale(1.4);
+        }
+        
+        100% {
+            color:     var(--star-white);
+            transform: scale(1);
+        }
+    }
+
+@keyframes star-animation-4 {
+        0% {
+            color:     var(--star-white);
+            transform: scale(1.2);
+        }
+        
+        50% {
+            color:     var(--star-darkGray);
+            transform: scale(1.6);
+        }
+        
+        100% {
+            color:     var(--star-white);
+            transform: scale(1);
+        }
+    }
+
+
+
+
+.presentation {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+.no-parallax {
+    color: white;
+}
+
+.parallax {
+    color: white;
+    position: absolute;
+    bottom: -300px;
+}
