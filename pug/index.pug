@@ -10,7 +10,7 @@ html(lang="en")
         <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200;400;500;700&display=swap" rel="stylesheet">
         link(rel="stylesheet", href="css/styles.css")
         title Componentes
-    body
+    body#main
         main#stars 
             nav.upper-navbar 
                 a(href="#").clear-link
@@ -29,16 +29,20 @@ html(lang="en")
                             span.odes-navbar__subword ánchez
                 ul.clear-list 
                     li.active: a(href="#").clear-link Inicio
-                    li: a(href="#").clear-link Contacto
                     li: a(href="#").clear-link Componentes
+                    li: a(href="#").clear-link Contacto
             .stars
                 .stars__container 
                     .stars__layout
                         section.presentation
                             .no-parallax
-                                h1 Bienvenidos
-                            .parallax
-                                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, nam. Accusantium fugit, libero praesentium, possimus numquam veritatis illo sit vel doloremque maiores dignissimos quisquam omnis modi, inventore vero nihil labore!
+                                h2 Bienvenidos
+                                .parallax-one
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, nam. Accusantium fugit, libero praesentium, possimus numquam veritatis illo sit vel doloremque maiores dignissimos quisquam omnis modi, inventore vero nihil labore!
+                                .parallax-two
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, nam. Accusantium fugit, libero praesentium, possimus numquam veritatis illo sit vel doloremque maiores dignissimos quisquam omnis modi, inventore vero nihil labore!
+
                 
         script(src="js/app_stars.js") 
         script(src="js/app_parallax.js") 
+        //- script(src="js/app_scroll.js") 
