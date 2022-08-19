@@ -393,13 +393,13 @@ nav.upper-navbar {
     margin: 0 auto;
     width:  80%;
     max-width: 120rem;
-    top: -22rem;
+    bottom: 100vh;
     left: 0;
     right: 0;
     animation: light-box 1s infinite;
     box-shadow: 0rem 0.5rem 1rem var(--main-transparentWhite);
     border: solid 0.1rem var(--main-transparentWhite);
-    transition: top 0s;
+    /* transition: top 0s; */
 }
 
 .parallax-two {

@@ -12,10 +12,9 @@
     window.onscroll = () => {
 
         
-        let displacement = window.scrollY;
+        let displacement = window.scrollY.toPrecision();
         let delta = (displacement * 3) - 220;
-        parallaxOne.style.top = `${(displacement * 3) - 220}px`;
-        parallaxTwo.style.top = `${(displacement * 3) - 1220}px`;
+        parallaxOne.style.bottom = `calc(100vh - ${(displacement * 2)}px)`;
 
 
 
