@@ -398,9 +398,11 @@ nav.upper-navbar {
     animation: light-box 1s infinite;
     box-shadow: 0rem 0.5rem 1rem var(--main-transparentWhite);
     border: solid 0.1rem var(--main-transparentWhite);
+    transition: top linear 0.2s;
 }
 
 .parallax-two {
+    transition: top linear 0.2s;
     color: white;
     position: absolute;
     height: 20rem;
