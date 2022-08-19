@@ -4,16 +4,16 @@
 
 :root {
     /* Colors */
-    -main-background-one:    #28288d;
-    -main-background-two:    #3d0b3d;
-    --main-black:            #100F0F;
-    --main-green:            #0F3D3E;
-    --main-darkGreen:        #031f20;
-    --main-gray:             #e7dcb8;
-    --main-white:            #F1F1F1;
-    --main-transparentWhite: rgba(241, 241, 241, 0.3);
+    --main-background-one:     #28288d;
+    --main-background-two:     #3d0b3d;
+    --main-black:              #100F0F;
+    --main-green:              #0F3D3E;
+    --main-darkGreen:          #031f20;
+    --main-gray:               #e7dcb8;
+    --main-white:              #F1F1F1;
+    --main-transparentWhite:   rgba(241, 241, 241, 0.3);
     --second-transparentWhite: rgba(241, 241, 241, 0.8);
-    --main-transparentBlack: rgba(16, 15, 15, 0.6);
+    --main-transparentBlack:   rgba(16, 15, 15, 0.6);
 
     --second-gray:   #d2d2ca;
     --second-blue:   rgb(192, 192, 236);
@@ -96,7 +96,7 @@ body#main {
 /*****************************************************************/
 
 main#stars {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -210,9 +210,10 @@ nav.upper-navbar {
 /*********************************************************/
 
 .stars {
-    min-height: 600vh;
+    min-height: 620vh;
     position:   relative;
     width:      100%;
+    overflow:   visible;
 }
 
 .stars__container {
@@ -356,9 +357,6 @@ nav.upper-navbar {
     }
 }
 
-
-
-
 .presentation {
     align-items:     center;
     display:         flex;
@@ -369,22 +367,23 @@ nav.upper-navbar {
 }
 
 .no-parallax {
-    position: relative;
-    display: flex;
-    align-items: center;
+    align-items:     center;
+    position:        relative;
+    display:         flex;
+    height:          100vh;
     justify-content: center;
-    color: white;
-    height: 100vh;
-    width: 100%;
+    width:           100%;
 }
 
 
 .parallax h2,
 .no-parallax h2 {
-    font-size: 4.8rem;
-    position: absolute;
-    -webkit-text-stroke: 2px green;
-    z-index: 250;
+    color:               var(--main-background-two);
+    font-size:           4.8rem;
+    position:            absolute;
+    text-shadow:         0rem 0.4rem 0.8rem var(--main-background-one);
+    z-index:             250;
+    -webkit-text-stroke: 2px var(--star-white);
 }
 
 .parallax h3,
@@ -394,10 +393,8 @@ nav.upper-navbar {
 
 .parallax {
     position: absolute;
-    padding: 4rem;
     margin: 0 auto;
     width:  100%;
-    max-width: 120rem;
     bottom: 20vh;
     left: 0;
     right: 0;
@@ -416,6 +413,7 @@ nav.upper-navbar {
     justify-content: center;
     margin: 0 0 100vh 0;
     width: 100%;
+
 }
 
 .parallax-box__content {
@@ -427,6 +425,7 @@ nav.upper-navbar {
     border-radius: 0.5rem;
     min-height: 80vh;
     width:  80%;
+    max-width: 120rem;
     animation: light-box 1s infinite;
     box-shadow: 0rem 0.5rem 1rem var(--main-transparentWhite);
     border: solid 0.1rem var(--main-transparentWhite);
@@ -435,11 +434,10 @@ nav.upper-navbar {
 
 .parallax__planet {
     position: absolute;
-    top: 0; 
+    top: -1200px; 
     left: -800px;
-    right: 0;
     z-index: 200;
-    width: 100vw;
+    width: 140vw;
     
 
 }
