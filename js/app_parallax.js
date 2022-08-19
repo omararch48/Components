@@ -4,8 +4,7 @@
     'use strict';
 
 
-    const parallaxOne = document.querySelector('.parallax-one');
-    const parallaxTwo = document.querySelector('.parallax-two');
+    const parallaxOne = document.querySelector('.parallax');
 
     let mainUbication = window.scrollY;
 
@@ -13,8 +12,7 @@
 
         
         let displacement = window.scrollY.toPrecision();
-        let delta = (displacement * 3) - 220;
-        parallaxOne.style.bottom = `calc(100vh - ${(displacement * 2)}px)`;
+        parallaxOne.style.bottom = `calc(20vh - ${(displacement * 2)}px)`;
 
 
 
