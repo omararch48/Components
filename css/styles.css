@@ -115,7 +115,7 @@ nav.upper-navbar {
     top:              0;
     transition:       top 1s;
     width:            100%;
-    z-index:          1000;
+    z-index:          10000;
 }
 
 .odes-navbar {
@@ -210,27 +210,24 @@ nav.upper-navbar {
 /*********************************************************/
 
 .stars {
-
     min-height: 600vh;
-    /* height:   200vh; */
-    position: relative;
-    width:    100%;
+    position:   relative;
+    width:      100%;
 }
 
 .stars__container {
+    bottom:   0;
     height:   100%;
     position: absolute;
     top:      0;
-    bottom:   0;
     width:    100%;
-    z-index:  100;
+    z-index:  0;
 }
 
 .stars__layout {
     height:   100%;
     position: relative;
     width:    100%;
-    z-index:  inherit;
 }
 
 .star {
@@ -268,7 +265,7 @@ nav.upper-navbar {
 }
 
 .star svg {
-    color:     var(--star-darkGray);
+    color: var(--star-darkGray);
 }
 
 @keyframes star-animation-1 {
@@ -286,7 +283,6 @@ nav.upper-navbar {
         color:     var(--star-white);
         transform: scale(1.6);
     }
-
     
     75% {
         color:     var(--star-lightGray);
@@ -331,7 +327,6 @@ nav.upper-navbar {
         color:     var(--star-darkGray);
         transform: scale(1.6);
     }
-
     
     75% {
         color:     var(--star-lightGray);
@@ -365,13 +360,12 @@ nav.upper-navbar {
 
 
 .presentation {
-    align-items: center;
+    align-items:     center;
+    display:         flex;
+    flex-direction:  column;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-
+    position:        relative;
+    width:           100%;
 }
 
 .no-parallax {
@@ -384,9 +378,13 @@ nav.upper-navbar {
     width: 100%;
 }
 
+
 .parallax h2,
 .no-parallax h2 {
     font-size: 4.8rem;
+    position: absolute;
+    -webkit-text-stroke: 2px green;
+    z-index: 250;
 }
 
 .parallax h3,
@@ -407,6 +405,7 @@ nav.upper-navbar {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+    z-index: 1000;
 }
 
 .parallax-box {
@@ -431,6 +430,22 @@ nav.upper-navbar {
     animation: light-box 1s infinite;
     box-shadow: 0rem 0.5rem 1rem var(--main-transparentWhite);
     border: solid 0.1rem var(--main-transparentWhite);
+}
+
+
+.parallax__planet {
+    position: absolute;
+    top: 0; 
+    left: -800px;
+    right: 0;
+    z-index: 200;
+    width: 100vw;
+    
+
+}
+
+.parallax__planet img {
+    width: 100%;
 }
 
 @keyframes light-box {
