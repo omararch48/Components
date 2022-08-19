@@ -89,6 +89,45 @@ body#main {
     width:  100%;
 }
 
+.alien-section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.alien-section img {
+    bottom: 0;
+    right: 0;
+    transform: rotate(-25deg);
+    position: absolute;
+    z-index: 300;
+}
+
+.comet-section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.comet-section img {
+    bottom: 0;
+    left: -200px;
+    transform: rotate(-5deg);
+    transform: scale(0.3);
+    position: absolute;
+    z-index: 300;
+}
+
+.astronaut-section {
+
+}
+
+.astronaut-section img {
+    
+}
+
 
 /**************************************************************/
 /************************* Top NavBar *************************/
@@ -373,7 +412,7 @@ nav.upper-navbar {
     position:            absolute;
     text-align:          center;
     text-shadow:         0rem 0.4rem 0.8rem var(--main-background-one);
-    z-index:             250;
+    z-index:             500;
     -webkit-text-stroke: 2px var(--star-white);
 }
 
@@ -442,10 +481,19 @@ nav.upper-navbar {
     border-radius:    0.5rem;
     box-shadow:       0rem 0.5rem 1rem var(--main-transparentWhite);
     color:            var(--main-white);
+    font-size: 2.8rem;
+    font-style: bolder;
     max-width:        120rem;
-    min-height:       80vh;
+    min-height:       20vh;
     padding:          4rem;
+    text-align: center;
     width:            80%;
+}
+
+.parallax-box__content p {
+    font-size: 2.8rem;
+    font-style: bolder;
+    text-align: center;
 }
 
 .parallax__planet {
