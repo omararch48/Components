@@ -2,7 +2,7 @@ const stars = document.querySelector('.stars');
 const starsVector = [];
 
 
-for (let i = 0; i < 150; i++) {
+for (let i = 0; i < 200; i++) {
     starsVector[i] = document.createElement('div');
     starsVector[i].className = `star star-${(i % 6) + 1}`;
     starsVector[i].innerHTML = `
