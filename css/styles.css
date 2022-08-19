@@ -383,7 +383,7 @@ nav.upper-navbar {
 }
 
 .parallax-one {
-    color: blue;
+    color: yellowgreen;
     position: absolute;
     height: 20rem;
     backdrop-filter:  blur(0.8rem);
@@ -399,6 +399,7 @@ nav.upper-navbar {
     animation: light-box 1s infinite;
     box-shadow: 0rem 0.5rem 1rem var(--main-transparentWhite);
     border: solid 0.1rem var(--main-transparentWhite);
+    transition: top 0s;
 }
 
 .parallax-two {
